@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #F15E38;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header img {
+  height: 40px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  background: #F15E38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.sidebar img {
+  width: 30px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.sidebar .active img {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px white);
+}
+
+.main {
+  margin-left: 100px;
+  padding: 80px 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.page {
+  display: none;
+}
+
+.page.visible {
+  display: block;
+}
+
+.idea-card {
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.top-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.idea-title {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+.idea-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.desc-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  flex: 1;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  color: #F15E38;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.like-btn.liked {
+  font-weight: bold;
+  color: red;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 12px;
+  background: #F15E38;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #aaa;
+  padding: 20px;
+}
+.feed-container {
+  width: 100%;
+  max-width: 500px;
+}

@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'EmployeeApp.apps.EmployeeappConfig',
-    'PersonApp.apps.PersonappConfig'
+    'EmployeeApp.apps.EmployeeappConfig'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

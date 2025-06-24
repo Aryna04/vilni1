@@ -27,13 +27,19 @@
       <div class="feed-container" id="homeFeed">
         {% for idea in all_ideas %}
             <div style="background-color: bisque; border-radius: 1px;">
-                <p>{{ idea.name }}</p>
-                <p>Створив користувач Невідомий</p>
-                <p>Published {{ idea.create_date|date:"F j, Y" }}</p>
+                <p>{{ idea.owner.name }}</p>
+                <p>{{ idea.title }}</p>
+                <p>{{ idea.description}}</p>
+                <img src="{{ idea.photo.img }}" alt="Фото ідеї">
+                <p>{{ idea.create_date|date:"F j, Y" }}</p>
+                <p>{{ idea.status}}</p>
+                <p>{{ idea.number_of_likes}}</p>
             </div>
-            
+
         {% endfor %}
       </div>
     </div>
+
+     <script src="app.js"></script>
 </body>
 </html>

@@ -12,12 +12,21 @@ class Person(models.Model):
     schoolclass = models.CharField(max_length=500)
 
 
+
 class Idea(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=500)
+    title = models.CharField(max_length=500)
     description = models.CharField(max_length=500)
     create_date = models.DateField(db_default=Now())
-    photo = models.URLField(max_length=500)
-    owner_id = models.ForeignKey(Person, blank=True, null=True, on_delete=models.SET_NULL)
+    photo = models.ImageField(upload_to='img')
+    owner = models.ForeignKey(Person, blank=True, null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=500)
     number_of_likes = models.IntegerField(db_default=0)
+
+
+
+class Like(models.Model):
+    date_of_like = models.DateField(db_default=Now())
+    person = models.ForeignKey(Person, blank=True, null=True, on_delete=models.SET_NULL)
+    idea = models.ForeignKey(Idea, blank=True, null=True, on_delete=models.SET_NULL)
+

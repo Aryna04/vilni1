@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Board</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+  <header>
+    <img src="{% static 'logo2.png' %}" alt="Logo" />
+  </header>
+
+  <div class="sidebar">
+    <div id="btnHome"><img src="{% static 'home.png' %}" alt="Home" /></div>
+    <div id="btnProfile"><img src="{% static 'user.png' %}" alt="Profile" /></div>
+    <div id="btnRanking"><img src="{% static 'winner.png' %}" alt="Ranking" /></div>
+    <div id="btnMyIdeas"><img src="{% static 'resume.png' %}" alt="My Ideas" /></div>
+    <div id="btnAdd"><img src="{% static 'add.png' %}" alt="Add Idea" /></div>
+  </div>
+
+  <div class="main">
+
+
+
+     <!-- Profile Page -->
+    <div id="profile" class="page">
+      <h2>Create Profile</h2>
+      <input id="nameInput" placeholder="Your Name" />
+      <input id="emailInput" placeholder="Your Email" />
+      <input id="passwordInput" type="password" placeholder="Password" />
+      <input type="file" id="profilePicInput" accept="image/*" />
+      <img id="profilePreview" src="" style="max-width: 200px; display:block; margin-top:10px;" />
+      <button id="saveProfileBtn">Save Profile</button>
+    </div>
+
+
+    
+    </div>
+</body>
+</html>

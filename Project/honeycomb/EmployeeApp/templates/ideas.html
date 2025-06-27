@@ -25,6 +25,10 @@
     <!-- Home Feed -->
     <div id="home" class="page visible">
       <div class="feed-container" id="homeFeed">
+        {% if test_message is not None %}
+        <p>{{test_message}}</p>
+        {% endif %}
+
         {% for idea in all_ideas %}
             <div style="background-color: bisque; border-radius: 1px;">
                 <p>{{ idea.owner.name }}</p>
